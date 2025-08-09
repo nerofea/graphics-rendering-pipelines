@@ -1,0 +1,7 @@
+if(WIN32)
+    set(CMAKE_TOOLCHAIN_FILE "vcpkg.cmake")
+     else()
+        find_package(PkgConfig REQUIRED)
+        pkg_check_modules(CAIRO REQUIRED cairo)
+        pkg_check_module(RSVG REQUIRED librsvg-2.0)
+    endif()
